@@ -1,25 +1,38 @@
 # Data Augmentation via Warping Transforms for Modeling Natural Variability in the Corneal Endothelium Enhances Semi-Supervised Segmentation
 
-El aprendizaje profundo ha aportado una contribución muy significativa a la segmentación de imágenes biomédicas, automatizando el proceso de delimitación en las imágenes médicas. Para realizar dicha tarea, los modelos deben entrenarse utilizando una gran cantidad de datos anotados o etiquetados que resaltan la región de interés con una máscara binaria. Sin embargo, la generación eficiente de anotaciones para datos tan grandes requiere un analista biomédico experto y un gran esfuerzo manual. Es una tarea tediosa y costosa, además de vulnerable a errores humanos. Para abordar este problema, se propone un marco de aprendizaje semisupervisado que se puede entrenar con un número limitado de muestras anotadas y, al mismo tiempo, con una gran cantidad de muestras sin anotaciones, lo que ocurre principalmente en problemas del mundo real.
+Deep learning has made a significant contribution to biomedical image segmentation by automating the delineation process in medical images. To achieve this task, models need to be trained using a large amount of annotated or labeled data that highlights the region of interest with a binary mask. However, efficiently generating annotations for such large datasets requires an expert biomedical analyst and a significant manual effort. It is a tedious and costly task, and also prone to human errors. To address this issue, we propose a semi-supervised learning framework that can be trained with a limited number of annotated samples and a large amount of unlabeled samples, which is common in real-world problems.
 
-Este repositorio incluye la implementación del artículo "Data Augmentation via Warping Transforms for Modeling Natural Variability in the Corneal Endothelium Enhances Semi-Supervised Segmentation" que se puede integrar fácilmente con cualquier modelo Encoder-decoder.
+This repository includes the implementation of the article "Data Augmentation via Warping Transforms for Modeling Natural Variability in the Corneal Endothelium Enhances Semi-Supervised Segmentation" which can be easily integrated with any Encoder-Decoder model.
 
-## Funcionalidades
+## Features
 
-El código de esta investigación ofrece las siguientes funcionalidades:
+The code for this research offers the following features:
 
-1.	Extraer la parte del codificador y convertirla en Siamese-Net para realizar un entrenamiento previo con Barlow Twins.
-2.	Integración del codificador previamente entrenado con el modelo encoder-decoder para realizar ajustes.
-3.	Evaluación con métricas estándar para tareas de segmentacion.
-4.	Visualización de salida.
-5.	También se incluye un jupyter notebook utilizando las diferentes estrategias de aumentación de datos.
+1. Extract the encoder part and convert it to Siamese-Net for pre-training with Barlow Twins.
+2. Integration of the pre-trained encoder with the encoder-decoder model for fine-tuning.
+3. Evaluation with standard metrics for segmentation tasks.
+4. Output visualization.
+5. A Jupyter Notebook using different data augmentation strategies.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
-- Bibliotecas necesarias:
+- Required libraries:
   - numpy
   - matplotlib
   - scikit-image
   - opencv-python
-  - tensorflow / pytorch (dependiendo de la implementación del modelo)
+  - tensorflow / pytorch (depending on the model implementation)
+
+## Citation
+
+```bibtex
+@article{Sanchez2024bt,
+  title={Data augmentation via warping transforms for modeling natural variability in the corneal endothelium enhances semi-supervised segmentation},
+  author={Sergio Sanchez, Noelia Vallez, Gloria Bueno, Andres G. Marrugo},
+  journal={Deep Learning},
+  pages={1--29},
+  year={2024},
+  publisher={PLOS ONE}
+}
+
